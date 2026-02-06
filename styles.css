@@ -21,6 +21,13 @@ body {
   .buttons {
     margin-top: 20px;
   }
+
+  .status-text {
+    margin-top: 12px;
+    min-height: 1.2em;
+    font-size: 0.95em;
+    color: #6b6b6b;
+  }
   
   .yes-button {
     font-size: 1.5em;
@@ -43,9 +50,44 @@ body {
     cursor: pointer;
   }
   
-  .gif_container img {
-    max-width: 100%;
-    height: auto;
+  .main-container .gif_container img {
+    width: 320px;
+    height: 320px;
+    object-fit: cover;
     border-radius: 10px;
     margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .yes-container .gif_container img {
+    width: 320px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+    margin: 20px auto 0;
+  }
+
+  .header_text {
+    font-size: 3em;
+    color: #d32f2f;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  /* Move content slightly up on small screens for better mobile appearance */
+  @media (max-width: 600px) {
+    body {
+      justify-content: flex-start;
+      padding-top: 6vh;
+      height: auto;
+    }
+
+    .container {
+      transform: translateY(-3vh);
+    }
   }
